@@ -41,7 +41,9 @@ const ChatApp = () => {
     setUsername(username);
     setRoom(room);
 
-    const newSocket = io("http://localhost:3001"); // Replace with your server URL
+    const newSocket = io("https://wordlecup-io-backend.onrender.com/"); // Replace with your server URL
+    // const newSocket = io("https://localhost:3001/"); // Replace with your server URL
+    
     setSocket(newSocket);
 
     newSocket.emit("join", { username, room }, (error) => {
