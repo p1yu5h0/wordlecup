@@ -15,7 +15,7 @@ const publicDirectoryPath = path.join(__dirname, '../public');
 
 app.use(express.static(publicDirectoryPath));
 
-io.origins('*:*'); // Enable CORS
+io.origins('*:*');
 
 io.on('connection', (socket) => {
   console.log('New connection');
